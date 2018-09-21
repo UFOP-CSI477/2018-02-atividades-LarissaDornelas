@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Atividade 1</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="barranav">
+					<a class="simbol">
+						<h2>Ativ1</h2>
+					</a>
+					<ul class="itens">
+						<li class="itembarra">
+							<a class="linkbarra active" href="#">Cadastrar</a>
+						</li>
+						<li class="itembarra">
+							<a class="linkbarra" href="listar.html">Listar</a>
+						</li>
+						<li class="itembarra">
+							<a class="linkbarra" href="index.html">Sair</a>
+						</li>
+					</ul>
+			
+			</div>
+		</nav>
+	</header>
+	<section>
+		<div class="formulario">
+			<h1>Insira seus dados</h1>
+			<form>
+				<div class="individual">
+					<label class="itemform" for="nome">Nome:</label>
+					<input class="inputform" id="nome" type="text" name="nome" placeholder="Insira seu nome completo">
+				</div> 
+				<div class="individual">
+					<label class="itemform"for="endereco">Endereço:</label>
+					<input class="inputform" id="endereco" type="text" name="endereco">
+				</div>
+				<div class="individual">	
+					<label class="itemform" for="telefone">Telefone:</label>
+					<input class="inputform" id="telefone" type="text" name="telefone" placeholder="(31)99999-9999">
+				</div>	
+				<div class="individual">	
+					<label class="itemform" for="genero">Gênero:</label>
+					<select class="inputform" id="genero">
+						<option>-</option>
+						<option>masculino</option>
+						<option>feminino</option>
+					</select>
+				</div>
+				<input class="botao botao-cadastrar" type="submit" value="Cadastrar">
+			</form>		
+		</div>
+	</section>
+</body>
+</html>

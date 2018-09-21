@@ -1,0 +1,11 @@
+.cadastro {
+	    margin-top: 53px;
+}
+
+#genero,#telefone{
+	width: 244px;
+}
+
+#nome,#endereco{
+	width:630px;
+}

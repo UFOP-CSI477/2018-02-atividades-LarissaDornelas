@@ -1,0 +1,112 @@
+body{
+	margin:0;
+}
+.barranav{
+	width: 100%;
+	background:#3991ff;
+	display: flex;
+}
+
+.itens{
+	list-style: none;
+	margin-top: 19px;
+}
+.itembarra{
+	display: inline;
+	padding-right:20px;
+}
+.simbol{
+	font-family: monospace;
+	margin-left: 43px;
+}
+.linkbarra{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+}
+
+.linkbarra:hover{
+	color: grey;
+}
+.linkbarra.active{
+    font-weight: 600;
+    color: #423737;
+}
+
+.formulario{
+	margin-top: 48px;
+    font-family: sans-serif;
+    margin-left: 92px;
+}
+
+#endereco{
+	margin-left: 12px;
+	width: 400px;
+}
+
+#nome{
+	margin-left: 37px;
+	width: 400px;
+}
+
+#telefone{
+	    margin-left: 20px;
+
+}
+#genero{
+    margin-left: 27px;
+    width: 173px;
+}
+
+.individual{
+	padding-bottom: 8px;
+}
+
+.botao{
+    background-color: #5c5c5c;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 14px;
+    margin: auto;
+    padding: 6px;
+    text-decoration: none;
+    border: none;
+    font-family: sans-serif;
+}
+
+.botao-cadastrar{
+	margin-left: 284px;
+    margin-top: 37px;
+    background-color: #3991ff !important;
+}
+
+.botao-cadastrar:hover{
+	background: grey !important;
+}
+
+.tabela{
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	border-collapse: collapse;,
+	margin-left: 11rem;
+    width: 76%;
+}
+
+.tabela-cab{
+	text-align:initial;
+	width: 200px;
+}
+
+.lista,.conteudo{
+    width: 95%;
+    margin-left: 92px;
+    margin-top: 48px;
+    font-family: sans-serif;}
+
+.tabela tr:nth-child(2n+2) {
+    background: #e9e9e9;
+}
+
+.espacamentover{
+	padding-bottom: 12px;
+
+}
