@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Calcular IMC</title>
-	<link rel="stylesheet" type="text/css" href="imc-css/corrida.css">
+
 	<link rel="stylesheet" type="text/css" href="imc-css/bootstrap/bootstrap.min.css">
 
 	<script src="imc-js/jquery-3.3.1.js"></script>
-	<script src="imc-js/corrida.js"></script>
+	<script src="imc-js/imc.js"></script>
 </head>
 <body>
 	<header>
@@ -25,9 +25,9 @@
 					      <label class="sr-only" for="inlineFormInputGroup">Peso</label>
 					      <div class="input-group mb-2">
 					        <div class="input-group-prepend">
-					        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Peso">
+					        <input type="text" class="form-control" id="peso" placeholder="Peso">
 					          <div class="input-group-text">Kg</div>
-					      
+
 					      </div>
 					  		</div>
 					  	</div>
@@ -35,25 +35,25 @@
 					      <label class="sr-only" for="inlineFormInputGroup">Altura</label>
 					      <div class="input-group mb-2">
 					        <div class="input-group-prepend">
-					        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Altura">
-					          <div class="input-group-text">cm</div>
-					      
+					        <input type="text" class="form-control" id="altura" placeholder="Altura">
+					          <div class="input-group-text">metros</div>
+
 					      </div>
 					  		</div>
 					  	</div>
-					    
+
 					    <div class="col-auto">
-					      <button type="button" class="btn btn-primary mb-2">Calcular</button>
+					      <button type="button" class="btn btn-primary mb-2" onclick="calcularIMC();">Calcular</button>
 					    </div>
 					  </div>
 			</form>
 			</div>
 			<div class="container-fluid" >
 				<div class="alert" role="alert" style="margin-top: 20px;" style="visibility:collapse;" id="resultado">
- 					 
+
 				</div>
 			</div>
-				
+
 			</div>
 
 
