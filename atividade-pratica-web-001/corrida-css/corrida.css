@@ -1,0 +1,33 @@
+
+.background{
+
+	position: fixed;
+	background: black;
+}
+
+.center-header{
+	border-bottom: 7px solid black;
+}
+
+.header{
+   position: absolute;
+   background: white;
+   z-index: 999;
+
+}
+.conteudo{
+	position: absolute;
+	background: white;
+	margin-top: 710px;
+	width: 100%;
+}
+.btn1-position{
+	margin-top: 30px;
+	margin-bottom: 32px;
+}
+
+.apuracao{
+	margin-top: 1005px; 
+	width: 100%;
+	position: absolute;
+}

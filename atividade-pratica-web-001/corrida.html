@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Corrida de rolimã</title>
+	<link rel="stylesheet" type="text/css" href="corrida-css/corrida.css">
+	<link rel="stylesheet" type="text/css" href="corrida-css/bootstrap/bootstrap.min.css">
+
+	<script src="corrida-js/jquery-3.3.1.js"></script>
+	<script src="corrida-js/corrida.js"></script>
+
+
+</head>
+<body>
+		<div class="container-fluid header">
+			<div class="row"">
+				<div class="col" style="background: black;">
+				</div>
+				<div class="col text-center center-header">
+					<img src="corrida-layout/logo.png" style="height: 118px;">
+				</div>
+				<div class="col" style="background: black;">
+
+				</div>
+			</div>
+		</div>
+		<div class="background">
+				<img src="corrida-layout/carrinho-rolima.jpg" class="img-fluid" style="opacity: 0.8;">
+		</div>
+
+			<div class="conteudo">
+				<div class="row" style="height: 110px;">
+					<div class="col">
+
+					</div>
+					<div class="col" style="background: black;">
+
+					</div>
+					<div class="col">
+
+					</div>
+
+				</div>
+				<div class="row">
+						<div class="col"style="background: black;">
+
+					</div>
+					<div class="col text-center">
+				     		<button type="button" id="iniciar" class="btn btn-outline-secondary btn1-position">
+								Iniciar Apuração
+							</button>
+
+
+					</div>
+					<div class="col"style="background: black;">
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+				  <div class="apuração" style="display:none;" id="apuracao">
+						<div class="jumbotron outline-secondary">
+								<h1>Seja Bem Vindo(a)!!</h1>
+								<h4>Para começar a apuração preencha as informações</h4>
+						</div>
+						<div class="container">
+									<form class="form-group">
+										<div class="row">
+											<div class="col-md-4">
+										<label for="nParticipantes">
+											Selecione o número de participantes:
+										</label>
+										<select class="form-control" id="nparticipantes">
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+										</select>
+										</div>
+										<div class="col-md-2">
+											<button type="button" id="ok" class="btn btn-danger btn1-position" onClick="addparticipantes()">
+												ok!
+											</button>
+										</div>
+						</div>
+									<table class="table table-borderless" id="tableinputs" style="visibility:hidden">
+										<tr>
+											<th>Largada</th>
+											<th>Nome</th>
+											<th>Tempo</th>
+										</tr>
+										<tbody id="participantes">
+											<tr id="nome1" style="visibility:collapse;" >
+												<td>
+													1
+												</td>
+												<td>
+													<div class="form-group">
+														<input id="p1"  class="form-control">
+													</div>
+												</td>
+												<td>
+													<div class="form-group">
+														<input id="t1" name="tempo1" class="form-control">
+													</div>
+												</td>
+											</tr>
+											<tr id="nome2" style="visibility:collapse;">
+												<td>
+													2
+												</td>
+												<td>
+													<div class="form-group">
+														<input id="p2" class="form-control">
+													</div>
+												</td>
+												<td>
+													<div class="form-group">
+														<input id="t2" name="tempo2" class="form-control">
+													</div>
+												</td>
+											</tr>
+											<tr id="nome3" style="visibility:collapse;">
+											<td>
+												3
+											</td>
+												<td>
+													<div class="form-group">
+														<input id="p3" class="form-control">
+													</div>
+												</td>
+												<td>
+													<div class="form-group">
+														<input id="t3" name="tempo3" class="form-control">
+													</div>
+												</td>
+											</tr>
+											<tr id="nome4" style="visibility:collapse;">
+												<td>
+													4
+												</td>
+												<td>
+													<div class="form-group">
+														<input id="p4" class="form-control">
+													</div>
+												</td>
+												<td>
+													<div class="form-group">
+														<input id="t4" name="tempo4" class="form-control">
+													</div>
+												</td>
+											</tr>
+
+											<tr id="nome5" style="visibility:collapse;">
+												<td>
+													5
+												</td>
+												<td>
+													<div class="form-group">
+														<input id="p5" class="form-control">
+													</div>
+												</td>
+												<td>
+													<div class="form-group">
+														<input id="t5" name="tempo5" class="form-control">
+													</div>
+												</td>
+											</tr>
+											<tr id="nome6" style="visibility:collapse;">
+												<td>
+													6
+												</td>
+												<td>
+													<div class="form-group">
+														<input id="p6" class="form-control">
+													</div>
+												</td>
+												<td>
+													<div class="form-group">
+														<input id="t6" name="tempo6" class="form-control">
+													</div>
+												</td>
+											</tr>
+
+
+										</tbody>
+									</table>
+
+					</form>
+					<button type="button" id="apurar" class="btn btn-success btn1-position" onClick="processaResult()" style="display:none;" style="visibility:collapse;">
+						Obter Resultado
+					</button>
+					<table class="table" id="tableapurados" style="visibility:collapse;">
+										<tr>
+											<th>Posição</th>
+											<th>Largada</th>
+											<th>Nome</th>
+											<th>Tempo</th>
+										</tr>
+										<tbody id="Apurados" >
+											<tr id="Ap1" class="table-success" style="visibility:collapse;">
+
+												<td id="pos1">
+													
+												</td>
+												<td id="Larg1">
+													
+												</td>
+												<td id="nom1">
+												    
+												</td>
+												<td id="tem1">
+													
+												</td>
+												<td id="venc1">
+													
+												</td>
+											</tr>
+											<tr id="Ap2" style="visibility:collapse;">
+
+												<td id="pos2">
+													
+												</td>
+												<td id="Larg2">
+													
+												</td>
+												<td id="nom2">
+												    
+												</td>
+												<td id="tem2">
+													
+												</td>
+												<td id="venc2">
+													
+												</td>
+											</tr>
+											<tr id="Ap3" style="visibility:collapse;">
+
+												<td id="pos3">
+													
+												</td>
+												<td id="Larg3">
+													
+												</td>
+												<td id="nom3">
+												    
+												</td>
+												<td id="tem3">
+													
+												</td>
+												<td id="venc3">
+													
+												</td>
+											</tr>
+											<tr id="Ap4" style="visibility:collapse;" >
+
+												<td id="pos4">
+													
+												</td>
+												<td id="Larg4">
+													
+												</td>
+												<td id="nom4">
+												    
+												</td>
+												<td id="tem4">
+													
+												</td>
+												<td id="venc4">
+													
+												</td>
+											</tr>	
+											<tr id="Ap5" style="visibility:collapse;" >
+
+												<td id="pos5">
+													
+												</td>
+												<td id="Larg5">
+													
+												</td>
+												<td id="nom5">
+												    
+												</td>
+												<td id="tem5">
+													
+												</td>
+												<td id="venc5">
+													
+												</td>
+											</tr>
+											<tr id="Ap6" style="visibility:collapse;" >
+
+												<td id="pos6">
+													
+												</td>
+												<td id="Larg6">
+													
+												</td>
+												<td id="nom6">
+												    
+												</td>
+												<td id="tem6">
+													
+												</td>
+												<td id="venc6">
+													
+												</td>
+											</tr>
+										
+
+
+										</tbody>
+									</table>
+			</div>
+			</div>
+				</div>
+			</div>
+
+		</div>
+
+	<script src="corrida-js/corrida-jquery.js"></script>
+</body>
+</html>
