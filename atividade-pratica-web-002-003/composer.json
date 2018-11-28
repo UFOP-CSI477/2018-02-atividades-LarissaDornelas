@@ -1,0 +1,22 @@
+{
+    "name": "larissadornelas/atividade2e3",
+    "description": "Atividades para demonstrar o conhecimento em php.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Larissa Dornelas",
+            "email": "larissa.e.dornelas@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer":"5.2.22",
+        "slim/slim":"2.0",
+        "rain/raintpl":"3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Atvp\\":"vendor\\atv\\php-classes\\src"
+        }
+    }
+}
