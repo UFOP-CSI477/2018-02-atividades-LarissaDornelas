@@ -1,0 +1,97 @@
+<div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12">
+                    <div class="product-content-right">
+                        <div class="woocommerce">
+                            <form method="GET" action="/checkout">
+                                <table cellspacing="0" class="shop_table cart">
+                                    <thead>
+                                        <tr>
+                                            <th class="product-remove">&nbsp;</th>
+                                            <th class="product-thumbnail">&nbsp;</th>
+                                            <th class="product-name">Produto</th>
+                                            <th class="product-price">Preço</th>
+                                            <th class="product-quantity">Quantidade</th>
+                                            <th class="product-subtotal">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {loop="$carrinho"}
+                                        <tr class="cart_item">
+                                            <td class="product-remove">
+                                                <a title="Remove this item" class="remove" href="/">X</a> 
+                                            </td>
+
+                                            <td class="product-thumbnail">
+                                                <a href="single-product.html"><img width="145" height="145" alt="{$value.nome}" class="shop_thumbnail" src="../res/site/img/produtos/{$value.imagem}"></a>
+                                            </td>
+
+                                            <td class="product-name">
+                                                <a href="single-product.html">{$value.nome}</a> 
+                                            </td>
+
+                                            <td class="product-price">
+                                                <span class="amount">R${$value.preco}</span> 
+                                            </td>
+
+                                            <td class="product-quantity">
+                                                <div class="quantity buttons_added">
+                                                    <input type="button" class="minus" value="-">
+                                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="{$value.qtd}" min="0" step="1">
+                                                    <input type="button" class="plus" value="+">
+                                                </div>
+                                            </td>
+
+                                            <td class="product-subtotal">
+                                                <span class="amount">R${$value.preco * $value.qtd}</span> 
+                                            </td>
+                                        </tr>
+                                        {/loop}
+                                        <tr>
+                                            <td class="actions" colspan="6">
+                                                <div class="coupon">
+                                                    <label for="coupon_code">Coupon:</label>
+                                                    <input type="text" placeholder="Coupon code" value="" id="coupon_code" class="input-text" name="coupon_code">
+                                                    <input type="submit" value="Aplicar cupon" name="apply_coupon" class="button">
+                                                </div>
+                                                <input type="submit" value="Atualizar carrinho" name="update_cart" class="button">
+                                                <input type="submit" value="Finalizar Compra" name="proceed" class="checkout-button button alt wc-forward">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    
+                                </table>
+                            </form>
+
+               
+
+
+                            <div class="cart_totals ">
+                                <h2>Total</h2>
+
+                                <table cellspacing="0">
+                                    <tbody>
+                                        <tr class="cart-subtotal">
+                                            <th>Subtotal</th>
+                                            <td><span class="amount">R${$total}</span></td>
+                                        </tr>
+
+                                        <tr class="shipping">
+                                            <th>Frete</th>
+                                            <td>Gratis</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h3 class="text-right">R${$total}</h3>
+                            </div>        
+
+                            </div>
+                        </div>                        
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    

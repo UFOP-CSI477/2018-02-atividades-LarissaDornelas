@@ -5,8 +5,8 @@ namespace Atvp\DB;
 class Sql {
 
 	const HOSTNAME = "127.0.0.1";
-	const USERNAME = "root";
-	const PASSWORD = "";
+	const USERNAME = "sistemaweb";
+	const PASSWORD = "123456";
 	const DBNAME   = "petshop";
 
 	private $conn;
