@@ -26,8 +26,7 @@ $app->get('/', function() {
 	$cart = new Cart();
 
 	$page->setTpl("index",[
-		"products"=>Product::checkList($products),
-		"carrinho"=>$cart->getTotal()	
+		"products"=>Product::checkList($products),	
 
 	]);
 
